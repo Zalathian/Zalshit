@@ -630,12 +630,3 @@ Tab:AddButton({
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/Unpatchabomb/master/Unpatchabomb'),true))()
     end
 })
-----new tab----
-
-
-local LP = Window:MakeTab({
-	Name = "Localplayer",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
