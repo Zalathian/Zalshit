@@ -639,39 +639,3 @@ local LP = Window:MakeTab({
 	PremiumOnly = false
 })
 
-LP:AddSlider({
-	Name = "Walkspeed",
-	Min = 16,
-	Max = 200,
-	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Walkspeed",
-	Callback = function(num)
-        getgenv().WalkSpeedValue = num; 
-        local Player = game:service'Players'.LocalPlayer;
-        Player.Character.Humanoid:GetPropertyChangedSignal'WalkSpeed':Connect(function()
-        Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
-        end)
-        Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
-end
-})
-
-LP:AddSlider({
-	Name = "JumpPower",
-	Min = 50,
-	Max = 200,
-	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "JumpPower",
-	Callback = function(num1)
-        getgenv().JPValue = num1; 
-        local Player = game:service'Players'.LocalPlayer;
-        Player.Character.Humanoid:GetPropertyChangedSignal'JumpPower':Connect(function()
-        Player.Character.Humanoid.JumpPower = getgenv().JPValue;
-        end)
-        Player.Character.Humanoid.JumpPower = getgenv().JPValue;
-end
-})
-
